@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  go:
+    env_file:
+      - ./src/.env
+    build: ./
+    volumes:
+      - ./src:/go/src/app
+    ports:
+      - ${PORT}:${PORT}
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo
+    restart: always

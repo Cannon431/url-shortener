@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Url shortener API</title>
+</head>
+<body>
+    <h1>Usage</h1>
+    <h2>Get a link info</h2>
+    Making request:
+    <blockquote>{{.scheme}}://{{.host}}:{{.port}}/api?link=link_to_short</blockquote>
+
+    It will return a json reponse where:
+    <ul>
+        <li><b>link</b> is your transfered link</li>
+        <li><b>hash</b> is unique hash of link</li>
+        <li><b>transitions</b> is ammount of made transition on shorted link</li>
+        <li><b>address</b> is shorted link</li>
+        <li><b>is_new</b> it means is link was created now at first time</li>
+    </ul>
+
+    <h2>Transition</h2>
+    Just open the <b>address</b> value in your browser
+</body>
+</html>
